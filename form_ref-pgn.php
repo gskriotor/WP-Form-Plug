@@ -8,5 +8,12 @@ Author: Gus Spencer
 Author URI: https://gusspencer.com/design/
 */
 
+//If accessed directly exit for security
+if(!defined('ABSPATH')) {
+  exit;
+}
+
+// Load scripts
+require_once(plugin_dir_path(__FILE__).'/incudes/scripts/wfp_scripts.php');
 
 ?>
