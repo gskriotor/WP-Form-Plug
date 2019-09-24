@@ -16,4 +16,16 @@ if(!defined('ABSPATH')) {
 // Load scripts
 require_once(plugin_dir_path(__FILE__).'/incs/wfp_scripts.php');
 
+function wfp_shortcode() {
+	ob_start();
+	custom_registration_function();
+
+	return ob_get_clean();
+}
+
+
+add_shortcode( 'wfp_form', 'wfp_shortcode' );
+
+
+
 ?>
